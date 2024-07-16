@@ -2067,33 +2067,33 @@ So a “1D” CNN in pytorch expects a 3D tensor as input: BxCxT</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [100/500], Step [1/2], Loss: 0.9990, Accuracy: 67.44%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [100/500], Step [1/2], Loss: 1.0899, Accuracy: 61.63%
 ------------------------------------------
-Epoch [100/500], Step [2/2], Loss: 1.0258, Accuracy: 64.53%
-------------------------------------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [200/500], Step [1/2], Loss: 0.7268, Accuracy: 75.00%
-------------------------------------------
-Epoch [200/500], Step [2/2], Loss: 0.7370, Accuracy: 73.84%
+Epoch [100/500], Step [2/2], Loss: 1.0001, Accuracy: 65.70%
 ------------------------------------------
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [300/500], Step [1/2], Loss: 0.5760, Accuracy: 78.88%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [200/500], Step [1/2], Loss: 0.7588, Accuracy: 71.51%
 ------------------------------------------
-Epoch [300/500], Step [2/2], Loss: 0.5648, Accuracy: 79.84%
-------------------------------------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [400/500], Step [1/2], Loss: 0.4955, Accuracy: 81.78%
-------------------------------------------
-Epoch [400/500], Step [2/2], Loss: 0.4810, Accuracy: 83.53%
+Epoch [200/500], Step [2/2], Loss: 0.7554, Accuracy: 72.29%
 ------------------------------------------
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [500/500], Step [1/2], Loss: 0.4701, Accuracy: 84.69%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [300/500], Step [1/2], Loss: 0.5470, Accuracy: 81.20%
 ------------------------------------------
-Epoch [500/500], Step [2/2], Loss: 0.4419, Accuracy: 85.08%
+Epoch [300/500], Step [2/2], Loss: 0.5554, Accuracy: 80.23%
+------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [400/500], Step [1/2], Loss: 0.4779, Accuracy: 83.14%
+------------------------------------------
+Epoch [400/500], Step [2/2], Loss: 0.4857, Accuracy: 81.78%
+------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [500/500], Step [1/2], Loss: 0.3473, Accuracy: 87.60%
+------------------------------------------
+Epoch [500/500], Step [2/2], Loss: 0.3554, Accuracy: 87.40%
 ------------------------------------------
 </pre></div>
 </div>
@@ -2123,7 +2123,7 @@ Epoch [500/500], Step [2/2], Loss: 0.4419, Accuracy: 85.08%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test Accuracy of the model on the 172 test moves: 81.977%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Test Accuracy of the model on the 172 test moves: 85.465%
 </pre></div>
 </div>
 </div>
@@ -2137,7 +2137,7 @@ Epoch [500/500], Step [2/2], Loss: 0.4419, Accuracy: 85.08%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/316182aa10c9c10a84517b0f1333b7ac9294431dc36c3a55a7c2aa3d4a479362.png" src="../../_images/316182aa10c9c10a84517b0f1333b7ac9294431dc36c3a55a7c2aa3d4a479362.png" />
+<img alt="../../_images/74c3d84d35b79634dcb24e3c959feee06a4f26213363de122f648411b1279057.png" src="../../_images/74c3d84d35b79634dcb24e3c959feee06a4f26213363de122f648411b1279057.png" />
 </div>
 </div>
 <p>The errors vary each time the model is run, but a common error seems to be that head scratching is predicted from some other movements that also involve arms a lot: throw/catch, hand clapping, phone talking, checking watch, hand waving, taking photo. If we train the model longer, these errors tend to go away as well. For some reason, crossed legged sitting is sometimes misclassified for crawling, but this doesn’t always happen.</p>
@@ -2225,10 +2225,10 @@ Epoch [500/500], Step [2/2], Loss: 0.4419, Accuracy: 85.08%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>74.4186046511628
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70.34883720930233
 </pre></div>
 </div>
-<img alt="../../_images/51bd2c7877bb7e720f8d099778a3a89281f8ea9373958cf54d12dfcd8760acf2.png" src="../../_images/51bd2c7877bb7e720f8d099778a3a89281f8ea9373958cf54d12dfcd8760acf2.png" />
+<img alt="../../_images/5dad6d5bcaf40963ad212e39681d013408fe1624645f78d56aebf41e41e629fc.png" src="../../_images/5dad6d5bcaf40963ad212e39681d013408fe1624645f78d56aebf41e41e629fc.png" />
 </div>
 </div>
 <p>That is some pretty good performance based on only 6 / 24 joints!</p>
@@ -2274,32 +2274,32 @@ Epoch [500/500], Step [2/2], Loss: 0.4419, Accuracy: 85.08%
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*** FITTING: Left Leg
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 81.40%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 76.74%
 
 *** FITTING: Right Leg
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 71.51%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 64.53%
 
 *** FITTING: Left Arm
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 66.28%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 58.72%
 
 *** FITTING: Right Arm
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 36.05%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 38.37%
 
 *** FITTING: Torso
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 81.40%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 80.23%
 
 *** FITTING: Head
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 49.42%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>limb performance: 50.58%
 </pre></div>
 </div>
 </div>
@@ -2353,44 +2353,44 @@ Epoch [500/500], Step [2/2], Loss: 0.4419, Accuracy: 85.08%
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>*** FITTING: limbs only
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 50.00%
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 83.72%
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 73.26%
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 73.84%
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 49.42%
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 85.47%
-median performance: 73.55%
-
-*** FITTING: limbs+torso+head
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 81.40%
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 85.47%
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 84.30%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 62.79%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 44.19%
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 81.98%
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 76.16%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 73.84%
+median performance: 75.00%
+
+*** FITTING: limbs+torso+head
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 84.88%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 87.79%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 72.09%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 83.14%
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 78.49%
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 76.16%
-median performance: 81.69%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>performance: 76.74%
+median performance: 80.81%
 </pre></div>
 </div>
 </div>
