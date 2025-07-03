@@ -194,8 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D5_Optimization/chapter_title.html">
-                        Optimization (W1D5)
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D4_Optimization/chapter_title.html">
+                        Optimization (W1D4)
                       </a>
                     </li>
                 
@@ -453,8 +453,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D5_Optimization/chapter_title.html">
-                        Optimization (W1D5)
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D4_Optimization/chapter_title.html">
+                        Optimization (W1D4)
                       </a>
                     </li>
                 
@@ -748,8 +748,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fine Tuning</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D5_Optimization/chapter_title.html">Optimization (W1D5)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_Optimization/student/W1D5_Tutorial1.html">Tutorial 1: Optimization techniques</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D4_Optimization/chapter_title.html">Optimization (W1D4)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Optimization/student/W1D4_Tutorial1.html">Tutorial 1: Optimization techniques</a></li>
 
 
 
@@ -951,7 +951,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W3D3_UnsupervisedAndSelfSupervisedLearning/student/W3D3_BonusLecture.html">Bonus Lecture: Melanie Mitchell</a></li>
 </ul>
 </li>
@@ -1021,6 +1020,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Booklet</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Introduction to projects</a></li>
+
+
 
 
 
@@ -1538,15 +1539,15 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
 
 <span class="c1"># for matrices and plotting</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># for random distributions</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">poisson</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">poisson</span>
 
 <span class="c1"># for logistic regression</span>
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">cross_val_score</span>
 </pre></div>
 </div>
 </div>
@@ -1563,7 +1564,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Plot Functions</span>
 
-<span class="k">def</span> <span class="nf">rasterplot</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span><span class="n">movement</span><span class="p">,</span><span class="n">trial</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">rasterplot</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span><span class="n">movement</span><span class="p">,</span><span class="n">trial</span><span class="p">):</span>
 
   <span class="p">[</span><span class="n">movements</span><span class="p">,</span> <span class="n">trials</span><span class="p">,</span> <span class="n">neurons</span><span class="p">,</span> <span class="n">timepoints</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">spikes</span><span class="p">)</span>
 
@@ -1578,7 +1579,7 @@ title="Print to PDF"
   <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;neuron&#39;</span><span class="p">)</span>
   <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time [s]&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">plotCrossValAccuracies</span><span class="p">(</span><span class="n">accuracies</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plotCrossValAccuracies</span><span class="p">(</span><span class="n">accuracies</span><span class="p">):</span>
   <span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
   <span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">accuracies</span><span class="p">,</span> <span class="n">vert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="mf">.7</span><span class="p">)</span>
   <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">accuracies</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
@@ -1605,7 +1606,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Generate Data</span>
 
-<span class="k">def</span> <span class="nf">generateSpikeTrains</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">37</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generateSpikeTrains</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">37</span><span class="p">):</span>
 
   <span class="n">gain</span>  <span class="o">=</span> <span class="mi">2</span>
   <span class="n">neurons</span>  <span class="o">=</span> <span class="mi">50</span>
@@ -1659,7 +1660,7 @@ title="Print to PDF"
   <span class="k">return</span> <span class="n">Spikes</span>
 
 
-<span class="k">def</span> <span class="nf">subsetPerception</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">subsetPerception</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 
   <span class="n">movements</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
   <span class="n">split</span> <span class="o">=</span> <span class="mi">400</span>
@@ -1719,7 +1720,7 @@ title="Print to PDF"
   <span class="k">return</span> <span class="n">output</span>
 
 
-<span class="k">def</span> <span class="nf">getData</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">getData</span><span class="p">():</span>
 
   <span class="n">spikes</span> <span class="o">=</span> <span class="n">generateSpikeTrains</span><span class="p">()</span>
   <span class="n">dataset</span> <span class="o">=</span> <span class="n">subsetPerception</span><span class="p">(</span><span class="n">spikes</span><span class="o">=</span><span class="n">spikes</span><span class="p">)</span>
@@ -1754,7 +1755,7 @@ title="Print to PDF"
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Media: Train illusion</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;iframe src=&quot;https://mfr.ca-1.osf.io/render?url=https://osf.io/57w2p/?direct%26mode=render</span><span class="si">%26a</span><span class="s1">ction=download%26mode=render&quot; width=&quot;100%&quot; scrolling=&quot;yes&quot; height=&quot;641px&quot; marginheight=&quot;0&quot; frameborder=&quot;0&quot; allowfullscreen webkitallowfullscreen&gt;&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1772,8 +1773,8 @@ title="Print to PDF"
 <p><em>Part of Step 1</em></p>
 <p>Previous literature predicts that accumulated sensory evidence from vestibular signals determines the decision of whether self-motion is experienced or not. We now have vestibular neuron data (simulated in our case, but let’s pretend) and would like to see if that prediction holds true.</p>
 <p>The data contains <span class="math notranslate nohighlight">\(N\)</span> neurons and <span class="math notranslate nohighlight">\(M\)</span> trials for each of 3 motion conditions: no self-motion, slowly accelerating self-motion and faster accelerating self-motion.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a92171cf-9bdf-4b49-9009-afd1202fab0b">
-<span class="eqno">(126)<a class="headerlink" href="#equation-a92171cf-9bdf-4b49-9009-afd1202fab0b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a0eb69c7-5752-43a4-a8e8-bdec97f6ae13">
+<span class="eqno">(126)<a class="headerlink" href="#equation-a0eb69c7-5752-43a4-a8e8-bdec97f6ae13" title="Permalink to this equation">#</a></span>\[\begin{align}
 N &amp;= 40 \\
 M &amp;= 400
 \end{align}\]</div>
@@ -1824,7 +1825,7 @@ M &amp;= 400
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/afa3aee1286f051254e49b1195cfc8283afae21ec2faf8d4e8da853197802936.png" src="../../_images/afa3aee1286f051254e49b1195cfc8283afae21ec2faf8d4e8da853197802936.png" />
+<img alt="../../_images/df13ef45ba79147ed148ecbafb8a20fd712cd4e2229fd021f6c73fa7845bc842.png" src="../../_images/df13ef45ba79147ed148ecbafb8a20fd712cd4e2229fd021f6c73fa7845bc842.png" />
 </div>
 </div>
 <p>Blue is the no-motion condition, and produces flat average spike counts across the 3 s time interval. The orange and green line do show a bell-shaped curve that corresponds to the acceleration profile. But there also seems to be considerable noise: exactly what we need. Let’s see what the spike trains for a single trial look like:</p>
@@ -1836,9 +1837,9 @@ M &amp;= 400
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/abcd1234d78f8c6ece7160377c69931e579eeb77c49ea8dc22e31bcb783b15d1.png" src="../../_images/abcd1234d78f8c6ece7160377c69931e579eeb77c49ea8dc22e31bcb783b15d1.png" />
-<img alt="../../_images/4ca4f0daee83ee022e428ac49ae91966266d7b5cf32e96067ec6f86e3ee602a0.png" src="../../_images/4ca4f0daee83ee022e428ac49ae91966266d7b5cf32e96067ec6f86e3ee602a0.png" />
-<img alt="../../_images/0f219516c28eb574e7847f3c3bae67a3b5c9b83b26329a56c0a261d0b1610c72.png" src="../../_images/0f219516c28eb574e7847f3c3bae67a3b5c9b83b26329a56c0a261d0b1610c72.png" />
+<img alt="../../_images/2c6b407f7ad1acbe1e241fe1358f2e48070ebc8ceb7fa8c738c018ea43218e90.png" src="../../_images/2c6b407f7ad1acbe1e241fe1358f2e48070ebc8ceb7fa8c738c018ea43218e90.png" />
+<img alt="../../_images/557d726993078227f262e64802a4789792650cc24e3173d8bb1cf348b10edc74.png" src="../../_images/557d726993078227f262e64802a4789792650cc24e3173d8bb1cf348b10edc74.png" />
+<img alt="../../_images/c4b01f4ba018b10256031f7fca781498725a52780d1bd48c17c1bf56d4f03187.png" src="../../_images/c4b01f4ba018b10256031f7fca781498725a52780d1bd48c17c1bf56d4f03187.png" />
 </div>
 </div>
 <p>You can change the trial number in the bit of code above to compare what the rasterplots look like in different trials. You’ll notice that they all look kind of the same: the 3 conditions are very hard (impossible?) to distinguish by eye-balling.</p>
@@ -1908,7 +1909,7 @@ M &amp;= 400
 <p>Below is a function that gets us the design matrix of observations X features (in this case: trials X neurons). It sums all spike counts, either across the whole time interval, or a window, specified in seconds before and after the peak acceleration at time <span class="math notranslate nohighlight">\(t=0\)</span> (it is the half-width of the window: <code class="docutils literal notranslate"><span class="pre">halfwin</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getDesignMatrix</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">motions</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span> <span class="n">halfwin</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">getDesignMatrix</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">motions</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span> <span class="n">halfwin</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get the design matrix and vector of classes for a logistic regression.</span>
 
@@ -1986,7 +1987,7 @@ M &amp;= 400
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8aea663528737b6c6c57cf53be66936f0b51570636ea36b1fc244c54b510e23f.png" src="../../_images/8aea663528737b6c6c57cf53be66936f0b51570636ea36b1fc244c54b510e23f.png" />
+<img alt="../../_images/fa8e1f4e6cf43b5f1dad77e49dd3c262a6c6486fa0428fb4064c5481957e9712.png" src="../../_images/fa8e1f4e6cf43b5f1dad77e49dd3c262a6c6486fa0428fb4064c5481957e9712.png" />
 </div>
 </div>
 <p>We asked for 8 cross validations, which show up as the blue dots in the graph (two have the same accuracy). Prediction accuracy ranges from 56% to 72%, with the average at 65%, and the orange line is the median. Given the noisy data, that is not too bad actually.</p>
@@ -1996,7 +1997,7 @@ M &amp;= 400
 <p>So we write a function that brings it all together:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">classifyMotionFromSpikes</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">classifyMotionFromSpikes</span><span class="p">(</span><span class="n">spikes</span><span class="p">,</span> <span class="n">classes</span><span class="p">,</span>
                              <span class="n">halfwin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">motions</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">cv</span><span class="o">=</span><span class="mi">8</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Runs one logistic regression using the specified parameters.</span>
@@ -2037,7 +2038,7 @@ M &amp;= 400
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8aea663528737b6c6c57cf53be66936f0b51570636ea36b1fc244c54b510e23f.png" src="../../_images/8aea663528737b6c6c57cf53be66936f0b51570636ea36b1fc244c54b510e23f.png" />
+<img alt="../../_images/fa8e1f4e6cf43b5f1dad77e49dd3c262a6c6486fa0428fb4064c5481957e9712.png" src="../../_images/fa8e1f4e6cf43b5f1dad77e49dd3c262a6c6486fa0428fb4064c5481957e9712.png" />
 </div>
 </div>
 <p>This is the exact same figure as before, so our function <code class="docutils literal notranslate"><span class="pre">classifyMotionFromSpikes()</span></code> also works as intended.</p>
@@ -2059,7 +2060,7 @@ M &amp;= 400
 <p>To do so, we will run the logistic regression quite a few times: on all data or split by the velocities, and then we use the data to predict the presence of real motion, or the judgements of self-motion. We repeat this for total accumulated spikes and for a window around the peak acceleration. And then we’ll plot the average classification performance in those 12 cases.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">runAnalysis</span><span class="p">(</span><span class="n">spikes</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">runAnalysis</span><span class="p">(</span><span class="n">spikes</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Runs one logistic regression using the specified parameters.</span>
 
@@ -2126,7 +2127,7 @@ M &amp;= 400
 <p>We will need to plot this output, and to simplify the code, we do that in a separate function, which we write here:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plotAccuracies</span><span class="p">(</span><span class="n">accuracies</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plotAccuracies</span><span class="p">(</span><span class="n">accuracies</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Plot the accuracies from our main fitting function.</span>
 
@@ -2174,7 +2175,7 @@ M &amp;= 400
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d2247aaca7e7cf616128f030d85cb0e02eea11fe5fb7b9740a63856b76eb6d91.png" src="../../_images/d2247aaca7e7cf616128f030d85cb0e02eea11fe5fb7b9740a63856b76eb6d91.png" />
+<img alt="../../_images/48c6aa611bbdaa4775baf1c3df22929a41402fa9dc7f3391f07840bdbb687626.png" src="../../_images/48c6aa611bbdaa4775baf1c3df22929a41402fa9dc7f3391f07840bdbb687626.png" />
 </div>
 </div>
 <p>Well, that’s interesting! The logistic regression doesn’t do a perfect job, but there is information in these results.</p>
